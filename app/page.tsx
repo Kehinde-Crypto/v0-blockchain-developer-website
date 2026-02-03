@@ -120,13 +120,13 @@ export default function Home() {
 
             {/* Right Image */}
             <div className="flex justify-center">
-              <div className="relative w-full max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl"></div>
+              <div className="relative w-full max-w-sm" style={{ aspectRatio: '1' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl" suppressHydrationWarning></div>
                 <div className="relative rounded-2xl overflow-hidden border border-accent/30 bg-card p-2">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20230331-WA0008-LPTCbVUVASFKivRVwBYsgJNQNCeZTg.jpg"
                     alt="Kehinde Olubunmi Browns"
-                    className="w-full h-auto rounded-xl"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
               </div>
