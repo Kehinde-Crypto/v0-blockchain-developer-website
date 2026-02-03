@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { WalletConnector } from '@/components/wallet-connector'
 import { ChevronRight, Code2, ExternalLink, Github, Linkedin, Instagram, Mail, ArrowUpRight, Shield, Zap, Lock } from 'lucide-react'
 
 export default function Home() {
@@ -28,8 +27,8 @@ export default function Home() {
   const projects = [
     {
       title: 'Supply Chain dApp',
-      description: 'Comprehensive blockchain solution for supply chain management with product authentication, shipment tracking, fraud detection, and pharmaceutical verification. Integrated with MetaMask for cross-chain transactions.',
-      tech: ['Solidity', 'MetaMask', 'React', 'Cross-Chain', 'Oracles'],
+      description: 'Comprehensive blockchain solution for supply chain management with product authentication, shipment tracking, fraud detection, and pharmaceutical verification enabling secure supply chain transparency.',
+      tech: ['Solidity', 'React', 'Cross-Chain', 'Oracles'],
       featured: true,
     },
     {
@@ -73,12 +72,9 @@ export default function Home() {
             <a href="#projects" className="text-sm hover:text-accent transition-colors">Projects</a>
             <a href="#contact" className="text-sm hover:text-accent transition-colors">Contact</a>
           </div>
-          <div className="flex items-center gap-3">
-            <WalletConnector />
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 hidden md:flex">
-              Say Hello
-            </Button>
-          </div>
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+            Say Hello
+          </Button>
         </div>
       </nav>
 
@@ -124,13 +120,13 @@ export default function Home() {
 
             {/* Right Image */}
             <div className="flex justify-center">
-              <div className="relative w-full max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl"></div>
+              <div className="relative w-full max-w-sm" style={{ aspectRatio: '1' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl" suppressHydrationWarning></div>
                 <div className="relative rounded-2xl overflow-hidden border border-accent/30 bg-card p-2">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20230331-WA0008-LPTCbVUVASFKivRVwBYsgJNQNCeZTg.jpg"
                     alt="Kehinde Olubunmi Browns"
-                    className="w-full h-auto rounded-xl"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
               </div>
