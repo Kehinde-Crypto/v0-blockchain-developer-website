@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { WalletConnector } from '@/components/wallet-connector'
 import { ChevronRight, Code2, ExternalLink, Github, Linkedin, Instagram, Mail, ArrowUpRight, Shield, Zap, Lock } from 'lucide-react'
 
 export default function Home() {
@@ -28,8 +27,8 @@ export default function Home() {
   const projects = [
     {
       title: 'Supply Chain dApp',
-      description: 'Comprehensive blockchain solution for supply chain management with product authentication, shipment tracking, fraud detection, and pharmaceutical verification. Integrated with MetaMask for cross-chain transactions.',
-      tech: ['Solidity', 'MetaMask', 'React', 'Cross-Chain', 'Oracles'],
+      description: 'Comprehensive blockchain solution for supply chain management with product authentication, shipment tracking, fraud detection, and pharmaceutical verification enabling secure supply chain transparency.',
+      tech: ['Solidity', 'React', 'Cross-Chain', 'Oracles'],
       featured: true,
     },
     {
@@ -73,12 +72,9 @@ export default function Home() {
             <a href="#projects" className="text-sm hover:text-accent transition-colors">Projects</a>
             <a href="#contact" className="text-sm hover:text-accent transition-colors">Contact</a>
           </div>
-          <div className="flex items-center gap-3">
-            <WalletConnector />
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 hidden md:flex">
-              Say Hello
-            </Button>
-          </div>
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+            Say Hello
+          </Button>
         </div>
       </nav>
 
