@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { WalletConnector } from '@/components/wallet-connector'
 import { ChevronRight, Code2, ExternalLink, Github, Linkedin, Instagram, Mail, ArrowUpRight, Shield, Zap, Lock } from 'lucide-react'
 
 export default function Home() {
@@ -72,9 +73,12 @@ export default function Home() {
             <a href="#projects" className="text-sm hover:text-accent transition-colors">Projects</a>
             <a href="#contact" className="text-sm hover:text-accent transition-colors">Contact</a>
           </div>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Say Hello
-          </Button>
+          <div className="flex items-center gap-3">
+            <WalletConnector />
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 hidden md:flex">
+              Say Hello
+            </Button>
+          </div>
         </div>
       </nav>
 
