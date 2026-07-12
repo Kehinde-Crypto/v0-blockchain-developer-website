@@ -55,6 +55,24 @@ export default function Home() {
     { icon: Lock, title: 'Automation', description: 'Developing autonomous systems through smart contracts and oracles' },
   ]
 
+  const certificates = [
+    {
+      title: 'Computer Programming',
+      issuer: 'Certificate of Completion',
+      date: '2022',
+      skills: ['Blockchain (Solidity)', 'HTML', 'CSS', 'JavaScript'],
+      link: 'https://blobs.vusercontent.net/blob/Kehinde%20Olubunmi%20Browns-b6i2jFf8Kmk0wfj8aOYeOXKcJpDvEE.pdf',
+    },
+    {
+      title: 'Advanced Solidity Bootcamp',
+      issuer: 'Encode Club',
+      date: 'October 2024',
+      skills: ['Solidity', 'Smart Contracts', 'Ethereum'],
+      link: 'https://blobs.vusercontent.net/blob/Kehinde%20Encode%20Award-UYhksUvrQ4rS1EffNVfAdC7sIe88uX.pdf',
+      participantId: '#13487',
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
@@ -264,8 +282,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Certificates Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Certifications & Achievements</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Professional certifications and credentials in blockchain development
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {certificates.map((cert, idx) => (
+              <a key={idx} href={cert.link} target="_blank" rel="noopener noreferrer">
+                <Card className="bg-card border-border overflow-hidden hover:border-accent transition-colors h-full cursor-pointer group">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">{cert.title}</h3>
+                        <p className="text-primary text-sm font-medium">{cert.issuer}</p>
+                      </div>
+                      <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0" />
+                    </div>
+                    
+                    <div className="mb-6">
+                      <p className="text-muted-foreground text-sm mb-4">Completed: {cert.date}</p>
+                      {cert.participantId && (
+                        <p className="text-muted-foreground text-sm mb-4">Participant ID: {cert.participantId}</p>
+                      )}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {cert.skills.map((skill) => (
+                        <span key={skill} className="px-3 py-1 rounded-full bg-secondary/10 border border-secondary/30 text-xs text-secondary">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      <section id="contact" className="py-20 px-6 bg-card/50">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-2xl border border-accent/30 p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
